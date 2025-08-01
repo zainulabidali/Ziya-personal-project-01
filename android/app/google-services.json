@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "141241288608",
+    "project_id": "ziya-attend-app",
+    "storage_bucket": "ziya-attend-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:141241288608:android:47d0237315ea2109ce86c5",
+        "android_client_info": {
+          "package_name": "com.example.personal_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgOGK6q5qfKsVte3zlE9cIUHWrFMIJhSI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
