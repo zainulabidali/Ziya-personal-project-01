@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:personal_app/home/widgets/body_widgets.dart';
+import 'package:personal_app/home/widgets/home_top_body.dart';
 
 class HomeDashbord extends StatelessWidget {
    HomeDashbord({super.key});
@@ -34,6 +35,8 @@ class HomeDashbord extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
+          DashboardHeader(),
+
           const Padding(
             padding: EdgeInsets.only(left: 16.0, top: 16.0),
             child: Align(

@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: const Appbar_widgets(),
-        body: _pages[_selectedIndex], // switch content here
+        body: _pages[_selectedIndex], 
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _selectedIndex,
           onTap: (index) => setState(() => _selectedIndex = index),

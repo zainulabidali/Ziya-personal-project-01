@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Appbar_widgets extends StatelessWidget implements PreferredSizeWidget {
   const Appbar_widgets({
     super.key,
@@ -23,62 +22,64 @@ class Appbar_widgets extends StatelessWidget implements PreferredSizeWidget {
             children: [
               Row(
                 children: [
-                  // Profile Card Container
-                  Container(
-                    width: MediaQuery.of(context).size.width * 0.75,
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(20),
-                        bottomRight: Radius.circular(20),
+                  // Profile Card
+                  Expanded(
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(20),
+                          bottomRight: Radius.circular(20),
+                        ),
+                        gradient: LinearGradient(
+                          colors: [
+                            Color.fromARGB(255, 3, 85, 115),
+                            Color.fromARGB(255, 31, 123, 13),
+                          ],
+                        ),
                       ),
-                      gradient: LinearGradient(
-                        colors: [
-                          Color.fromARGB(255, 3, 85, 115),
-                          Color.fromARGB(255, 31, 123, 13),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                      child: Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(8),
+                            child: Image.asset(
+                              'assets/img/usthad.5.jpg',
+                              width: 56,
+                              height: 56,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          SizedBox(width: 12),
+                          Expanded(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  "Abid Ali",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                Text(
+                                  "Flutter Developer",
+                                  style: TextStyle(color: Colors.white70),
+                                ),
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                     ),
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                    child: Row(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(
-                              8), // square with rounded corners, or use 0 for sharp
-                          child: Image.asset(
-                            'assets/img/usthad.5.jpg',
-                            width: 56,
-                            height: 56,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        SizedBox(width: 12),
-                        Expanded(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Abid Ali",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                ),
-                              ),
-                              Text(
-                                "Flutter Developer",
-                                style: TextStyle(color: Colors.white70),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
                   ),
-    
-                  // Notification Icon with red dot
-                  SizedBox(width: 80),
+
+                  // Space between profile and icon
+                  SizedBox(width: 50),
+
+                  // Notification Icon
                   notification_icon(),
                 ],
               ),

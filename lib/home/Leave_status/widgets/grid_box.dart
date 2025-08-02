@@ -19,7 +19,7 @@ class leave_grid_box extends StatelessWidget {
         crossAxisCount: 2,
         crossAxisSpacing: 12,
         mainAxisSpacing: 12,
-        childAspectRatio: 1.2,
+        childAspectRatio: 1.1, 
       ),
       itemBuilder: (context, index) {
         final item = leaveData[index];
@@ -40,15 +40,35 @@ class leave_grid_box extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Text(item['title'], style: Kleave_grid_box_tittel),
+                
+                  Flexible(
+                    child: Text(
+                      item['title'],
+                      style: Kleave_grid_box_tittel,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                    ),
+                  ),
                   const Spacer(),
-                  Icon(item['icon'], size: 24, color: Colors.blue),
+                  Icon(
+                    item['icon'],
+                    size: 24,
+                    color: Colors.blue,
+                  ),
                 ],
               ),
               const SizedBox(height: 14),
-              Text(item['value']!, style: Kleave_grid_box_value),
+              Text(
+                item['value'] ?? '',
+                style: Kleave_grid_box_value,
+                overflow: TextOverflow.ellipsis,
+              ),
               const SizedBox(height: 10),
-              Text(item['subtitle']!, style: Kleave_grid_box_subtittel),
+              Text(
+                item['subtitle'] ?? '',
+                style: Kleave_grid_box_subtittel,
+                overflow: TextOverflow.ellipsis,
+              ),
             ],
           ),
         );
