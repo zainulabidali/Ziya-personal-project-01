@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:personal_app/home/Leave_status/leaves_homepage.dart';
 import 'package:personal_app/home/home_screen.dart';
+import 'package:personal_app/leave/leave_home_page.dart';
 
 class BuildDashboardItem extends StatelessWidget {
   final String title;
@@ -34,10 +35,10 @@ class BuildDashboardItem extends StatelessWidget {
       Navigator.push(context, MaterialPageRoute(builder: (_) => LeavesHomepage()));
       break;
     case 4:
-      // Navigator.push(context, MaterialPageRoute(builder: (_) => HomeScreen()));
+      // Navigator.push(context, MaterialPageRoute(builder: (_) => LeaveHomeScreen()));
       break;
     case 5:
-      // Navigator.push(context, MaterialPageRoute(builder: (_) => HomeScreen()));
+      Navigator.push(context, MaterialPageRoute(builder: (_) =>LeaveHomeScreen()));
       break;
   }
 },

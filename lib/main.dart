@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         return MultiProvider(
           providers: [
             ChangeNotifierProvider(create: (_) => ChipSelectionProvider()),
-            // You can add more providers here if needed
+          
           ],
           child: const MaterialApp(
             debugShowCheckedModeBanner: false,

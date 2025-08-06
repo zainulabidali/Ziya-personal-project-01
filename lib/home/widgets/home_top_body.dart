@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:personal_app/home/widgets/divider.dart';
 import 'package:personal_app/provider.dart';
 import 'package:provider/provider.dart';
 
@@ -49,17 +50,20 @@ class DashboardHeader extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: const Color.fromARGB(255, 253, 251, 251),
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
-          BoxShadow(color: Colors.grey, blurRadius: 3, offset: Offset(0, 1))
+          BoxShadow(
+              color: const Color.fromARGB(255, 227, 222, 222),
+              blurRadius: 1,
+              offset: Offset(0, 1))
         ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
-            'Good Morning,\nGokul',
+            'Good Morning,\nZainul Abid',
             style: TextStyle(fontSize: 18, color: Colors.grey),
           ),
           const SizedBox(height: 25),
@@ -179,8 +183,7 @@ class DashboardHeader extends StatelessWidget {
           label: Text(
             label,
             style: TextStyle(
-              color: isSelected ? Colors.blue : Colors.black,
-            ),
+                color: isSelected ? Colors.blue : Colors.black, fontSize: 12),
           ),
           style: OutlinedButton.styleFrom(
             side: BorderSide(
@@ -202,8 +205,8 @@ class DashboardHeader extends StatelessWidget {
       margin: const EdgeInsets.symmetric(vertical: 8),
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        border: Border(bottom: BorderSide(color: Colors.grey.shade300)),
-      ),
+          // border: Border(bottom: BorderSide(color: Colors.grey.shade300)),
+          ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -211,7 +214,7 @@ class DashboardHeader extends StatelessWidget {
               style: const TextStyle(
                   color: Colors.green,
                   fontWeight: FontWeight.bold,
-                  fontSize: 16)),
+                  fontSize: 15)),
           const SizedBox(height: 4),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -236,7 +239,9 @@ class DashboardHeader extends StatelessWidget {
                 child: const Text('Start'),
               ),
             ),
-          )
+          ),
+          SizedBox(height: 20.h,),
+   DashedDivider()
         ],
       ),
     );

@@ -34,10 +34,11 @@ dependencies:
   cupertino_icons: ^1.0.8
   table_calendar: 
   flutter_screenutil: ^5.9.3
-  firebase_core: ^2.27.0
-  firebase_auth: ^4.17.8
-  provider: ^6.1.0
-
+  firebase_core: 
+  firebase_auth: 
+  provider:
+  printing: 
+  pdf: 
 
   
 dev_dependencies:
@@ -64,7 +65,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - C:\Users\ADMIN\Desktop\Ziya first project personal app\personal_app\assets\img\usthad.5.jpg
+    - assets/img/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -92,7 +92,7 @@ class Appbar_widgets extends StatelessWidget implements PreferredSizeWidget {
                   child: CircleAvatar(
                     radius: 26,
                     backgroundImage: AssetImage(
-                        'assets/small_avatar.jpg'), // Replace with actual image
+                        'assets/img/ziya_logo-removebg-preview.png'), // Replace with actual image
                     backgroundColor: Colors.transparent,
                   ),
                 ),
