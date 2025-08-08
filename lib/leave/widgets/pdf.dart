@@ -1,16 +1,14 @@
 import 'dart:typed_data';
-import 'package:flutter/material.dart';
+
 import 'package:flutter/services.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
-import 'package:pdf/widgets.dart';
 
 Future<Uint8List> generatePayslipPdf() async {
   final pdf = pw.Document();
 
   final logoImage = pw.MemoryImage(
-    (await rootBundle.load('assets/img/ziya_logo-removebg-preview.png')).buffer.asUint8List(),
+    (await rootBundle.load('assets/img/ziya_logo.png')).buffer.asUint8List(),
   );
 
   pdf.addPage(
@@ -56,7 +54,7 @@ Future<Uint8List> generatePayslipPdf() async {
                         ),
                         pw.Text(
                           "Key To Success",
-                          style: pw.TextStyle(
+                          style: const pw.TextStyle(
                             fontSize: 14,
                             color: PdfColors.green,
                           ),
@@ -64,13 +62,14 @@ Future<Uint8List> generatePayslipPdf() async {
                       ],
                     ),
 
-                    // 👉 Right Side Payslip Info
+                    // 👉 Right Side Payslip Info  
+                    pw.Spacer(),
                     pw.Column(
                       crossAxisAlignment: pw.CrossAxisAlignment.end,
                       children: [
                         pw.Text(
                           "Payslip for month",
-                          style: pw.TextStyle(
+                          style: const pw.TextStyle(
                             fontSize: 12,
                           ),
                         ),

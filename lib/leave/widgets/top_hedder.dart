@@ -14,10 +14,11 @@ class top_hedding extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Image.asset(
-          "assets/img/ziya_logo-removebg-preview.png", // replace with actual logo path
+          "assets/img/ziya_logo.png", // replace with actual logo path
           width: 40.w,
           height: 50.h,
         ),
+        SizedBox(width: 5.w,),
        Column(
   crossAxisAlignment: CrossAxisAlignment.start,
   children: [
@@ -38,7 +39,7 @@ class top_hedding extends StatelessWidget {
     ),
   ],
 ),
-
+Spacer(),
         Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [

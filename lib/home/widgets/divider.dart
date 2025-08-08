@@ -6,7 +6,7 @@ class DashedDivider extends StatelessWidget {
 
   const DashedDivider({
     this.height = 1,
-    this.color = Colors.black54,
+    this.color = const Color.fromARGB(135, 169, 168, 168),
     super.key,
   });
 

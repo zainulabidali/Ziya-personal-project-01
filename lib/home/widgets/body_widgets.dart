@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:personal_app/home/Leave_status/leaves_homepage.dart';
-import 'package:personal_app/home/home_screen.dart';
+import 'package:personal_app/home/Reports/reports_home.dart';
 import 'package:personal_app/leave/leave_home_page.dart';
 
 class BuildDashboardItem extends StatelessWidget {
@@ -22,23 +22,23 @@ class BuildDashboardItem extends StatelessWidget {
     return GestureDetector(
       onTap: () {
   switch (index) {
-    case 0:
-      // Navigator.push(context, MaterialPageRoute(builder: (_) => LeavesHomepage()));
+    case 6:
+      Navigator.push(context, MaterialPageRoute(builder: (_) => ReportsHome()));
       break;
     case 1:
-      // Navigator.push(context, MaterialPageRoute(builder: (_) => HomeScreen()));
+      // Navigator.push(context, MaterialPageRoute(builder: (_) => ReportsHome()));
       break;
     case 2:
-      // Navigator.push(context, MaterialPageRoute(builder: (_) => HomeScreen()));
+      // Navigator.push(context, MaterialPageRoute(builder: (_) => ReportsHome()));
       break;
     case 3:
       Navigator.push(context, MaterialPageRoute(builder: (_) => LeavesHomepage()));
       break;
     case 4:
-      // Navigator.push(context, MaterialPageRoute(builder: (_) => LeaveHomeScreen()));
+      // Navigator.push(context, MaterialPageRoute(builder: (_) => ReportsHome()));
       break;
     case 5:
-      Navigator.push(context, MaterialPageRoute(builder: (_) =>LeaveHomeScreen()));
+      Navigator.push(context, MaterialPageRoute(builder: (_) =>LeaveHomeScreen()));    
       break;
   }
 },

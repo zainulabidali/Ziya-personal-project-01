@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:personal_app/home/widgets/appbar_widgets.dart';
 import 'package:personal_app/home/widgets/home_dashbord.dart';
 import 'package:personal_app/leave/leave_home_page.dart';
+import 'package:personal_app/profile/profile_home.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -18,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
      HomeDashbord(), // Home (Dashboard)
     const Center(child: Text('History Page')), // History tab
     const LeaveHomeScreen(), // Leave page
-    const Center(child: Text('Profile Page')), // Profile tab
+    ProfileScreen(), // Profile tab
   ];
 
   @override

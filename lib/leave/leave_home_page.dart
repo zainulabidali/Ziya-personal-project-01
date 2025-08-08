@@ -16,12 +16,12 @@ class LeaveHomeScreen extends StatelessWidget {
           // Background watermark image placeholder
           Positioned.fill(
             child: Opacity(
-                opacity: 0.05,
+                opacity: 0.09,
                 child: Center(
                   child: Image.asset(
-                    "assets/img/ziya_logo-removebg-preview.png",
-                    width: 150,
-                    height: 150,
+                    "assets/img/ziya_logo.png",
+                    width: 350,
+                    height: 350,
                   ),
                 )),
           ),

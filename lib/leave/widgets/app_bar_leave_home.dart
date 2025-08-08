@@ -11,12 +11,11 @@ class AppBarLeaveHome extends StatelessWidget implements PreferredSizeWidget {
       color: Colors.white,
       child: Row(
         children: [
-          
           CircleAvatar(
             radius: 20.r,
             backgroundColor: Colors.blue,
             child: Image.asset(
-              "assets/img/ziya_logo-removebg-preview.png", // replace with actual logo path
+              "assets/img/ziya_logo.png", // replace with actual logo path
               width: 40.w,
               height: 40.h,
             ),
@@ -51,35 +50,36 @@ class AppBarLeaveHome extends StatelessWidget implements PreferredSizeWidget {
           ),
           SizedBox(width: 12.w),
 
-      
-Container(
-  width: 40.w,
-  height: 40.w,
-  decoration: BoxDecoration(
-    color:  Colors.blue,
-    shape: BoxShape.circle,
-  ),
-  child: IconButton(
-    icon: Icon(Icons.notifications, size: 20.sp,color: Colors.white,),
-    onPressed: () {},
-    splashRadius: 20.r,
-  ),
-),
- SizedBox(width: 12.w),
+          Container(
+            width: 32.w,
+            height: 32.w,
+            decoration: BoxDecoration(
+              color: Colors.blue,
+              shape: BoxShape.circle,
+            ),
+            child: IconButton(
+              icon: Icon(
+                Icons.notifications,
+                size: 18.sp,
+                color: Colors.white,
+              ),
+              onPressed: () {},
+              splashRadius: 20.r,
+            ),
+          ),
+          SizedBox(width: 12.w),
 
           // 👤 Profile Image in circular avatar
-GestureDetector(
-  onTap: () {
-  },
-  child: CircleAvatar(
-    radius: 20.r,
-    backgroundImage: AssetImage(
-      'assets/img/usthad.5.jpg',
-    ),
-    backgroundColor: Colors.grey.shade200,
-  ),
-),
-
+          GestureDetector(
+            onTap: () {},
+            child: CircleAvatar(
+              radius: 20.r,
+              backgroundImage: AssetImage(
+                'assets/img/usthad.5.jpg',
+              ),
+              backgroundColor: Colors.grey.shade200,
+            ),
+          ),
         ],
       ),
     );

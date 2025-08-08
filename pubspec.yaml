@@ -39,6 +39,7 @@ dependencies:
   provider:
   printing: 
   pdf: 
+  fl_chart: ^0.66.2
 
   
 dev_dependencies:

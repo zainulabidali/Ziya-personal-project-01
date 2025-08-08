@@ -27,12 +27,12 @@ class Appbar_widgets extends StatelessWidget implements PreferredSizeWidget {
                     child: Container(
                       decoration: const BoxDecoration(
                         borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(20),
-                          bottomRight: Radius.circular(20),
+                          topRight: Radius.circular(25),
+                          bottomRight: Radius.circular(25),
                         ),
                         gradient: LinearGradient(
                           colors: [
-                            Color.fromARGB(255, 3, 85, 115),
+                            Color.fromARGB(255, 4, 110, 149),
                             Color.fromARGB(255, 31, 123, 13),
                           ],
                         ),
@@ -87,12 +87,13 @@ class Appbar_widgets extends StatelessWidget implements PreferredSizeWidget {
                 top: 15,
                 left: MediaQuery.of(context).size.width * 0.75 - 20,
                 child: CircleAvatar(
-                  radius: 30,
+                  radius: 28,
                   backgroundColor: Colors.white,
                   child: CircleAvatar(
                     radius: 26,
                     backgroundImage: AssetImage(
-                        'assets/img/ziya_logo-removebg-preview.png'), // Replace with actual image
+                      
+                        'assets/img/ziya_logo.png'), // Replace with actual image
                     backgroundColor: Colors.transparent,
                   ),
                 ),
