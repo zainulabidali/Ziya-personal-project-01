@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:personal_app/home/notification/notification.dart';
+import 'package:personal_app/home/widgets/notification_widget.dart';
 
 class Appbar_widgets extends StatelessWidget implements PreferredSizeWidget {
   const Appbar_widgets({
@@ -92,7 +94,6 @@ class Appbar_widgets extends StatelessWidget implements PreferredSizeWidget {
                   child: CircleAvatar(
                     radius: 26,
                     backgroundImage: AssetImage(
-                      
                         'assets/img/ziya_logo.png'), // Replace with actual image
                     backgroundColor: Colors.transparent,
                   ),
@@ -106,40 +107,3 @@ class Appbar_widgets extends StatelessWidget implements PreferredSizeWidget {
   }
 }
 
-class notification_icon extends StatelessWidget {
-  const notification_icon({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        CircleAvatar(
-          backgroundColor: Color.fromARGB(255, 50, 109, 228),
-          radius: 20,
-          child: Icon(Icons.notifications,
-              color: Color.fromARGB(255, 253, 253, 253)),
-        ),
-        Positioned(
-          right: 4,
-          top: 4,
-          child: Container(
-            width: 10,
-            height: 10,
-            decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: Color.fromARGB(255, 249, 248, 248),
-                  spreadRadius: 1,
-                ),
-              ],
-              color: Colors.red,
-              shape: BoxShape.circle,
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}

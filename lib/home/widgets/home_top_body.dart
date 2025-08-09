@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:personal_app/home/widgets/divider.dart';
+import 'package:personal_app/home/widgets/work_sumery.dart';
 import 'package:personal_app/provider.dart';
 import 'package:provider/provider.dart';
 
@@ -34,12 +35,39 @@ class DashboardHeader extends StatelessWidget {
           const SizedBox(height: 20),
           _buildChips(context),
           const SizedBox(height: 20),
-          _buildTask("UI/UX Design Implementation",
-              "Translating design specifications into functional and visually appealing user interfaces using technologies like HTML, CSS, and JavaScript."),
-          _buildTask("Backend Development",
-              "Creating and managing databases for efficient data storage, retrieval and processing."),
-          _buildTask("Server-Side Logic",
-              "Developing and maintaining the logic that runs on the server, handling user requests, processing data and interacting with databases."),
+          Consumer<ChipSelectionProvider>(
+            builder: (_, provider, __) {
+              if (provider.selectedChipIndex == 0) {
+                // My Tasks
+                return Column(
+                  children: [
+                    _buildTask("UI/UX Design Implementation",
+                        "Translating design specifications into functional and visually appealing user interfaces using technologies like HTML, CSS, and JavaScript."),
+                    _buildTask("Backend Development",
+                        "Creating and managing databases for efficient data storage, retrieval and processing."),
+                    _buildTask("Server-Side Logic",
+                        "Developing and maintaining the logic that runs on the server, handling user requests, processing data and interacting with databases."),
+                  ],
+                );
+
+                
+              } else if (provider.selectedChipIndex == 1) {
+                // Task Tracker
+                return const Center(child: Text("Task Tracker Content Here"));
+
+
+              } else if (provider.selectedChipIndex == 2) {
+                // Pending
+                return Center(child: Text("Task Tracker Content Here"));
+
+
+              } else if (provider.selectedChipIndex == 3) {
+                // Work Summary
+                return Work_summer_dashbord();
+              }
+              return const SizedBox.shrink();
+            },
+          ),
           const SizedBox(height: 20),
         ],
       ),
@@ -56,7 +84,7 @@ class DashboardHeader extends StatelessWidget {
           BoxShadow(
               color: const Color.fromARGB(255, 227, 222, 222),
               blurRadius: 1,
-              offset: Offset(0, 1))
+              offset: const Offset(0, 1))
         ],
       ),
       child: Column(
@@ -153,15 +181,19 @@ class DashboardHeader extends StatelessWidget {
   }
 
   Widget _buildChips(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        _buildChip(context, Icons.calendar_today, "My Tasks", 0),
-        const SizedBox(width: 10),
-        _buildChip(context, Icons.timer, "Task Tracker", 1),
-        const SizedBox(width: 10),
-        _buildChip(context, Icons.loop, "Pending", 2),
-      ],
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: [
+          _buildChip(context, Icons.calendar_today, "My Tasks", 0),
+          SizedBox(width: 10),
+          _buildChip(context, Icons.timer, "Task Tracker", 1),
+          SizedBox(width: 10),
+          _buildChip(context, Icons.loop, "Ongoing&Pending", 2),
+          SizedBox(width: 10),
+          _buildChip(context, Icons.work, "Work Summary", 3),
+        ],
+      ),
     );
   }
 
@@ -204,9 +236,6 @@ class DashboardHeader extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 8),
       padding: const EdgeInsets.all(18),
-      decoration: BoxDecoration(
-          // border: Border(bottom: BorderSide(color: Colors.grey.shade300)),
-          ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -240,8 +269,8 @@ class DashboardHeader extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20.h,),
-   DashedDivider()
+          SizedBox(height: 20.h),
+          DashedDivider(),
         ],
       ),
     );
